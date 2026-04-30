@@ -5,19 +5,24 @@
 <h3>UserForm</h3>
 
 <EditForm Model="@user" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator/>
     <div>
         <label>FullName:</label>
         <InputText @bind-Value="user.FullName"/>
+        <ValidationMessage For="@(() => user.FullName)"/>
     </div>
 
     <div>
         <label>Email:</label>
         <InputText @bind-Value="user.Email" />
+        <ValidationMessage For="@(() => user.Email)"/>  
     </div>
     
     <div>
         <label>Age:</label>
         <InputNumber @bind-Value="user.Age" />
+        <ValidationMessage For="@(() => user.Age)" />
+
     </div>
     <br />
     
