@@ -6,6 +6,7 @@
 
 <EditForm Model="@user" OnValidSubmit="HandleSubmit">
     <DataAnnotationsValidator/>
+    <ValidationSummary/>
     <div>
         <label>FullName:</label>
         <InputText @bind-Value="user.FullName"/>
