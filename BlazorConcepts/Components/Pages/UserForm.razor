@@ -1,0 +1,47 @@
+﻿@page "/form"
+@using MyFirstBlazorApp.Models
+@rendermode InteractiveServer
+
+<h3>UserForm</h3>
+
+<EditForm Model="@user" OnValidSubmit="HandleSubmit">
+    <div>
+        <label>FullName:</label>
+        <InputText @bind-Value="user.FullName"/>
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="user.Email" />
+    </div>
+    
+    <div>
+        <label>Age:</label>
+        <InputNumber @bind-Value="user.Age" />
+    </div>
+    <br />
+    
+    <button class="btn btn-primary" type="submit">Submit</button>
+   </EditForm>
+   
+   <hr />
+  
+@if (isSubmitted == true)
+{
+    <h2>Submitted Data</h2>
+    <p><b>FullName: </b> @user.FullName</p>
+    <p><b>Email: </b> @user.Email</p>
+    <p><b>Age: </b> @user.Age</p>
+}
+
+
+@code {
+
+    UserProfile user = new UserProfile();
+    bool isSubmitted = false;
+
+    void HandleSubmit()
+    {
+        isSubmitted = true;
+    }
+} 

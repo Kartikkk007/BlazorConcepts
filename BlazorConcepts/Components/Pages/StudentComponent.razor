@@ -1,0 +1,16 @@
+﻿@* @page "/student/{rollNo:int?}" *@
+@page "/student/{rollNo:int?}/course/{id:int}"
+<h3>Student Component</h3>
+<h2>student roll no is:@rollNo</h2>
+<h2>student course id is:@id</h2>
+
+
+@code {
+    [Parameter]
+    public int rollNo { get; set; }
+    [Parameter]
+    public int id { get; set; }
+
+
+
+}

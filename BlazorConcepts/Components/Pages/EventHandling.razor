@@ -1,0 +1,27 @@
+﻿@page "/eh"
+@rendermode InteractiveServer
+
+<h3>Event Handling</h3>
+
+@* <button class="btn btn-primary" @onclick="IncrementCount">
+    Increase
+    </button>
+<hr />
+<h2>Current count = @count</h2> *@
+
+<input placeholder="Enter Your Name" @oninput="OnNameChanged" />
+<hr />
+<h2>Your Name is : @name</h2>
+
+@code {
+    string name = "";
+    void OnNameChanged(ChangeEventArgs e)
+    {
+        name = e.Value?.ToString() ?? "";
+    }
+    // int count = 0;
+    // void IncrementCount()
+    // {
+    //     count++;
+    // }
+}
