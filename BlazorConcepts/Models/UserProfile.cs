@@ -6,6 +6,7 @@ namespace MyFirstBlazorApp.Models
     {
         [Required(ErrorMessage ="full name is required")]
         [StringLength(30, ErrorMessage = "full name cannot be more than 30 characters")]
+        [MinLength(3, ErrorMessage = "full name must be at least 3 characters")]
         public string? FullName { get; set; }
         
         
@@ -32,6 +33,14 @@ namespace MyFirstBlazorApp.Models
         [Phone(ErrorMessage ="Invalid phone number")]
         public string? PhoneNumber { get; set; }
 
+
+        [Required(ErrorMessage = "url is required")]
+        [Url(ErrorMessage = "Invalid URL")]
+        public string? URL { get; set; }
+
+        [Required(ErrorMessage = "credit card number is required")]
+        [CreditCard(ErrorMessage = "Invalid credit card number")]
+        public string? CreditCardNumber { get; set; }
 
 
 

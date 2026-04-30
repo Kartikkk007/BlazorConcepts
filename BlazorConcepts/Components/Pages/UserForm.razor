@@ -43,6 +43,20 @@
         <InputText @bind-Value="user.PhoneNumber" />
         <ValidationMessage For="@(() => user.PhoneNumber)" />
     </div>
+
+     <div>
+        <label> URL:</label>
+        <InputText @bind-Value="user.URL" />
+        <ValidationMessage For="@(() => user.URL)" />
+    </div>
+
+    <div>
+        <label> Credit Card Number:</label>
+        <InputText @bind-Value="user.CreditCardNumber" />
+        <ValidationMessage For="@(() => user.CreditCardNumber)" />
+    </div>
+
+
     <br />
     
     <button class="btn btn-primary" type="submit">Submit</button>
