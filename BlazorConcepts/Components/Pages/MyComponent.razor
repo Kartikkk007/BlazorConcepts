@@ -1,0 +1,27 @@
+﻿@page "/mycomp"
+<h3>MyComponent</h3>
+<h2>My name is :@name</h2>
+<h2>My age is :@age</h2>
+<h2>Next year I will turn :@(age+1)</h2>
+
+@if(name=="rajat"){
+    <h3>hi rajat</h3>
+
+}
+else
+{
+    <h3>you are not rajat</h3>
+    
+}
+@for(int i = 0; i < 5; i++)
+{
+<h2>@i</h2>
+}
+
+
+@code {
+    string name = "kartik";
+    int age = 23;
+
+
+}

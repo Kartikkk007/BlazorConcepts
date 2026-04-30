@@ -1,0 +1,13 @@
+﻿@page "/parent"
+<h3>ParentComponent</h3>
+<ChildComponent Name="Kartik" Age="23" Hobbies="@myHobbies" Sports="@mySports"/>
+@code {
+    public string[] myHobbies = { "reading", "sports","singing"};
+    public List<string> mySports = new List<string>
+    {
+        "Badminton",
+        "Cricket",
+        "Football",
+        "swimming"
+    };
+}

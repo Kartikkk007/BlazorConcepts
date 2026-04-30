@@ -1,0 +1,21 @@
+﻿@page "/binding"
+@rendermode InteractiveServer
+<h1>Data Binding</h1>
+@* <h2>One way Data Binding</h2>
+
+<h3>My name is:@name</h3> *@
+
+<h2>two way data binding</h2>
+
+<input type="text" @bind="name" @bind:event="oninput"/>
+<hr />
+<h2>your name is: @name</h2>
+
+<NavLink href="/about">About Us</NavLink>
+<NavLink href="/contact">Contact Us</NavLink>
+
+@code {
+
+    string name = "ano";
+    // string name = "Kartik Sharma";
+}

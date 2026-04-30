@@ -1,0 +1,28 @@
+﻿<h3>ChildComponent</h3>
+<h1>Name is : @Name</h1>
+<h1>My age is :@Age</h1>
+
+<ul>
+    @foreach (var item in Hobbies)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<hr />
+<ol>
+    @foreach (var item in Sports)
+    {
+        <li>@item</li>
+    }
+</ol>
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+    [Parameter]
+    public int Age { get; set; }
+    [Parameter]
+    public string[]? Hobbies { get; set; }
+    [Parameter]
+    public List<string>? Sports { get; set; }
+}
