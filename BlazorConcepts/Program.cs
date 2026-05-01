@@ -13,6 +13,11 @@ namespace BlazorConcepts
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
             builder.Services.AddScoped<GreetingService>();
+            builder.Services.AddSingleton<TestService>();
+            //builder.Services.AddScoped<TestService>();
+            //builder.Services.AddTransient<TestService>();
+
+
 
             var app = builder.Build();
 

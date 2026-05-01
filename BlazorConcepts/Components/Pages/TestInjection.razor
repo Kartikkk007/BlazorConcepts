@@ -1,0 +1,13 @@
+﻿@page "/testInjection"
+@using BlazorConcepts.Services
+@inject TestService Service1
+@inject TestService Service2
+
+<h3>TestInjection</h3>
+
+<h2>Service1 ID: @Service1.Id</h2>
+<h2>Service2 ID: @Service2.Id</h2>
+
+@code {
+
+}
