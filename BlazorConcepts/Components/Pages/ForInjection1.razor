@@ -1,0 +1,11 @@
+﻿@page "/ForInjection1"
+@using BlazorConcepts.Services
+@inject GreetingService Greeting
+
+<h3>ForInjection1</h3>
+<h2>@Greeting.GetMessage()</h2>
+
+
+@code {
+
+}

@@ -1,4 +1,5 @@
 using BlazorConcepts.Components;
+using BlazorConcepts.Services;
 
 namespace BlazorConcepts
 {
@@ -11,6 +12,7 @@ namespace BlazorConcepts
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
+            builder.Services.AddScoped<GreetingService>();
 
             var app = builder.Build();
 

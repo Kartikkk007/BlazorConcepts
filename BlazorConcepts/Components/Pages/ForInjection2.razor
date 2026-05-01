@@ -1,0 +1,21 @@
+﻿@page "/ForInjection2"
+@using BlazorConcepts.Services
+@* @inject GreetingService Greeting *@
+
+<h3>ForInjection2</h3>
+@* <h2>@Greeting.GetMessage()</h2> *@
+<h1>@message</h1>
+
+
+@code {
+    private string? message;
+       
+    [Inject]
+    public GreetingService Greeting { get; set; }
+
+    protected override void OnInitialized()
+    {
+        message = Greeting.GetMessage();
+    }
+
+}
